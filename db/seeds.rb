@@ -22,8 +22,8 @@ Game.create(name: "Call of Duty:Modernwarfare", release_date: "2019-02-27")
 
 #Seed Reviews
 
-Review.create(picture: "/client/Logo suggestions/God of War PS4 Hits Game.jpeg",game_name: "God of War Ragnarok",  rating: 4, review: "This game is a classic and I love it!")
-Review.create(picture: "/client/Logo suggestions/Grand Theft Auto V_ Premium Online Edition Game for PS4.jpeg", game_name: "Grand Theft Auto V", rating: 5, review: "This is one of my favorite games of all time. The music is amazing!")
-Review.create(picture: "/client/Logo suggestions/Call of Duty_ Modern Warfare II - PlayStation 5.jpeg", game_name: "Call of Duty:Modernwarfare", rating: 3, review: "I enjoyed playing this game series as a kid, but it hasn't aged very well.")
+Review.create(game_image: "/client/Logo suggestions/God of War PS4 Hits Game.jpeg", game_name: "God of War Ragnarok",  rating: 4, review: "This game is a classic and I love it!")
+Review.create(game_image: "/client/Logo suggestions/Grand Theft Auto V_ Premium Online Edition Game for PS4.jpeg", game_name: "Grand Theft Auto V", rating: 5, review: "This is one of my favorite games of all time. The music is amazing!")
+Review.create(game_image: "/client/Logo suggestions/Call of Duty_ Modern Warfare II - PlayStation 5.jpeg", game_name: "Call of Duty:Modernwarfare", rating: 3, review: "I enjoyed playing this game series as a kid, but it hasn't aged very well.")
 
 puts "🛬 Done seeding!"

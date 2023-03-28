@@ -49,3 +49,9 @@ group :test do
 end
 
 gem "active_model_serializers", "~> 0.10.12"
+
+# gem 'pgsql', '~> 1.9', '>= 1.9.1'
+# gem 'sql_query', '~> 0.7.3'
+# gem 'sql-maker', '~> 1.0'
+# gem 'migration_sql', '~> 0.1.0'
+# gem 'seed_migration', '~> 1.2', '>= 1.2.3'
