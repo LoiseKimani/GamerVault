@@ -1,3 +1,3 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id, :name, :release_date
+  attributes :id, :game_image, :game_name, :release_date
 end
