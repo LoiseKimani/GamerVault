@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 } */
-nav {
+/* nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,6 +110,6 @@ nav {
 
 .hamburger.open .line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
-}
+} */
 
 /* .hamburger.open .line:nth-child( */

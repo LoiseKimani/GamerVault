@@ -1,31 +1,50 @@
 import React, { useState } from "react";
 
-const GameReviewForm = () => {
+function GameReviewForm() {
   const [gameName, setGameName] = useState("");
   const [gamePicture, setGamePicture] = useState("");
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState("");
 
-  const handleGameNameChange = (event) => {
+  function handleGameNameChange(event) {
     setGameName(event.target.value);
-  };
+  }
 
-  const handleGamePictureChange = (event) => {
+  function handleGamePictureChange(event) {
     setGamePicture(event.target.value);
-  };
+  }
 
-  const handleRatingChange = (event) => {
+  function handleRatingChange(event) {
     setRating(event.target.value);
-  };
+  }
 
-  const handleReviewChange = (event) => {
+  function handleReviewChange(event) {
     setReview(event.target.value);
-  };
+  }
 
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     event.preventDefault();
-    // do something with the form data, e.g. send it to a server
-  };
+    fetch("http://localhost:3000/reviews", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ gameName, gamePicture, rating, review }),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        console.log(data);
+        alert("Review submitted successfully!");
+        setGameName("");
+        setGamePicture("");
+        setRating(0);
+        setReview("");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Error submitting review. Please try again.");
+      });
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -63,6 +82,6 @@ const GameReviewForm = () => {
       <button type="submit">Submit</button>
     </form>
   );
-};
+}
 
 export default GameReviewForm;
