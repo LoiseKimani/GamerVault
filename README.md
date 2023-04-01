@@ -1,6 +1,16 @@
-# Project Template: React/Rails API
+# Project Template: 
 
-## Description
+GAMER VAULT
+
+React/Rails API
+
+##         This app allows you to search, post and view reviews of your favorite
+        games. Whether you're a casual gamer or a hardcore enthusiast, you'll
+        find plenty of helpful information and insights here. Simply use the
+        search function to find reviews of a specific game or browse through
+        all the reviews to discover new titles to play. And if you're feeling
+        inspired, why not write your own review and share your thoughts with
+        the community?
 
 This project is scaffolded so that you can build a React frontend and Rails
 backend together, and easily deploy them to Render.
