@@ -4,7 +4,8 @@ GAMER VAULT
 
 React/Rails API
 
-##         This app allows you to search, post and view reviews of your favorite
+##         
+        This app allows you to search, post and view reviews of your favorite
         games. Whether you're a casual gamer or a hardcore enthusiast, you'll
         find plenty of helpful information and insights here. Simply use the
         search function to find reviews of a specific game or browse through
