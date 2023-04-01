@@ -1,0 +1,77 @@
+import React, { useState } from "react";
+
+const NewReview = () => {
+  const [gameImage, setGameImage] = useState("");
+  const [gameName, setGameName] = useState("");
+  const [rating, setRating] = useState("");
+  const [comment, setComment] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("game_image", gameImage);
+    formData.append("game_name", gameName);
+    formData.append("rating", rating);
+    formData.append("comment", comment);
+
+    axios.post("/game-review", formData)
+      .then((response) => {
+        console.log("Review submitted successfully.");
+      })
+      .catch((error) => {
+        console.error("Error submitting review.", error);
+      });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="gameImage">Game Image:</label>
+        <input
+          type="file"
+          id="gameImage"
+          name="game_image"
+          onChange={(e) => setGameImage(e.target.files[0])}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="gameName">Game Name:</label>
+        <input
+          type="text"
+          id="gameName"
+          name="game_name"
+          value={gameName}
+          onChange={(e) => setGameName(e.target.value)}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="rating">Rating:</label>
+        <input
+          type="number"
+          id="rating"
+          name="rating"
+          min="1"
+          max="5"
+          value={rating}
+          onChange={(e) => setRating(e.target.value)}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="comment">Comment:</label>
+        <textarea
+          id="comment"
+          name="comment"
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+export default NewReview;

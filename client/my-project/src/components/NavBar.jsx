@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <>
       <Navbar fluid={true} rounded={true}>
-        <Navbar.Brand href="https://flowbite.com/">
+        <Navbar.Brand as={NavLink} to="/">
           <img
             src="https://flowbite.com/docs/images/logo.svg"
             className="mr-3 h-6 sm:h-9"
@@ -22,13 +22,19 @@ function NavBar() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/home" active={true}>
+          <Navbar.Link as={NavLink} to="/home" exact>
             Home
           </Navbar.Link>
-          <Navbar.Link href="/newreview">Add Review</Navbar.Link>
-          <Navbar.Link href="/review">All Review</Navbar.Link>
-          <Navbar.Link href="/user/review">My Review</Navbar.Link>
-          {/* <Navbar.Link href="/aboutus">About Us</Navbar.Link> */}
+          <Navbar.Link as={NavLink} to="/newreview">
+            Add Review
+          </Navbar.Link>
+          <Navbar.Link as={NavLink} to="/reviews">
+            All Reviews
+          </Navbar.Link>
+          <Navbar.Link as={NavLink} to="/user/reviews">
+            My Reviews
+          </Navbar.Link>
+          {/* <Navbar.Link as={NavLink} to="/aboutus">About Us</Navbar.Link> */}
         </Navbar.Collapse>
       </Navbar>
     </>
